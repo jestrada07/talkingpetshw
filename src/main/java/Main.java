@@ -9,8 +9,6 @@ public class Main {
         System.out.println("How many pets do you have?");
         int numOfPets = scanner.nextInt();
         scanner.nextLine(); // consume the newline character left in the buffer
-
-
         List<Pet> pets = new ArrayList<>(); //list that takes in pets inside the angle brackets
 
 
@@ -21,35 +19,28 @@ public class Main {
             String petName = scanner.nextLine();
 
 
-            Pet pet; // pet instance
-            switch (petType) { //
-                case "Dog": //checks if case matches the expression "Pet Type"
-                    pet = new Dog(petName); // new instance of pet - creates a dog and takes in a petName argument
-                    break;
-                case "Cat":
-                    pet = new Cat(petName);
-                    break;
-                case "Frog":
-                    pet = new Frog(petName);
-                    break;
-                default:
-                    pet = new Pet(petName, petType); // default: you can create any pet type and give it a name
-                    break;
+            if (petType.equals("Dog")) {
+                pets.add(new Dog(petName));
+            } else if (petType.equals("Cat")) {
+
+                pets.add(new Cat(petName));
+            } else if (petType.equals("Frog")) {
+                pets.add(new Frog(petName));
             }
-            pets.add(pet); //adds the pets created to the pets list.
-        }
 
-        System.out.println("Here are your pets:");
+
+
+
+
+
+            }
+        System.out.println("Here are your pets and what they say...");
         for (Pet pet : pets) { //loops through the pets created
-            System.out.println(pet.getName()); //get their name -  prints out and lists their name
+            System.out.println(pet.getClass().getSimpleName() + " name is " + pet.getName() + " and he says " + pet.speak()); //get their name -  prints out and lists their name
+
 
 
         }
-        System.out.println("Here are what your pets say:");
-        for (Pet pet : pets) { //loops through pets created
-            System.out.println(pet.speak()); //prints out and lists what they say.
-        }
-
-
     }
+
 }

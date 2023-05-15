@@ -2,7 +2,7 @@ public class Frog extends Pet {
 
 
     public Frog(String name) {
-        super(name, "Frog");
+        super(name);
     }
 
     @Override

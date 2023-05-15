@@ -1,13 +1,13 @@
 public class Pet {
 
     private String name;
-    private String petType;
 
 
 
-    public Pet(String name, String petType){
+
+    public Pet(String name){
         this.name = name;
-        this.petType = petType;
+
 
 
 
@@ -31,13 +31,7 @@ public class Pet {
         this.name = name;
     }
 
-    public String getPetType() {
-        return petType;
-    }
 
-    public void setPetType(String petType) {
-        this.petType = petType;
-    }
 
 
 
