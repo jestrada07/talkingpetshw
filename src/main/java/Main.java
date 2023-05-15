@@ -36,7 +36,7 @@ public class Main {
             }
         System.out.println("Here are your pets and what they say...");
         for (Pet pet : pets) { //loops through the pets created
-            System.out.println(pet.getClass().getSimpleName() + " name is " + pet.getName() + " and he says " + pet.speak()); //get their name -  prints out and lists their name
+            System.out.println("Pet name is " + pet.getName() + " and he says " + pet.speak()); //get their name -  prints out and lists their name
 
 
 
